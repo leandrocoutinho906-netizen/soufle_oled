@@ -111,6 +111,15 @@
             tapping-term-ms = <200>;
             bindings = <&macro_recortar>, <&kp>;
         };
+
+        tr_colar: tr_colar {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TR_COLAR";
+            #binding-cells = <2>;
+            hold-trigger-on-release;
+            tapping-term-ms = <200>;
+            bindings = <&macro_colar>, <&kp>;
+        };
     };
 
     keymap {
@@ -127,10 +136,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2            &kp N3          &kp N4            &kp N5                                        &kp N6         &kp N7             &kp N8     &kp N9     &kp N0               &kp MINUS
-&kp ESC    &kp Q   &kp W             &kp E           &kp R             &kp T                                         &kp Y          &kp U              &kp I      &kp O      &kp P                &kp LBKT
-&kp TAB    &kp A   &kp S             &kp D           &mt LEFT_SHIFT F  &kp G                                         &kp H          &mt RIGHT_SHIFT J  &kp K      &kp L      &macro_interrogacao  &kp SQT
-&kp LSHFT  &kp Z   &tr_recortar 0 X  &tr_Copiar 0 C  &kp V             &kp B    &kp C_PLAY_PAUSE    &kp PRINTSCREEN  &kp N          &kp M              &kp COMMA  &kp DOT    &kp SLASH            &kp RSHFT
+&kp GRAVE  &kp N1  &kp N2            &kp N3          &kp N4            &kp N5                                        &kp N6         &kp N7             &kp N8     &kp N9     &kp N0            &kp MINUS
+&kp ESC    &kp Q   &kp W             &kp E           &kp R             &kp T                                         &kp Y          &kp U              &kp I      &kp O      &kp P             &kp LBKT
+&kp TAB    &kp A   &kp S             &kp D           &mt LEFT_SHIFT F  &kp G                                         &kp H          &mt RIGHT_SHIFT J  &kp K      &kp L      &td_interrogacao  &kp SQT
+&kp LSHFT  &kp Z   &tr_recortar 0 X  &tr_Copiar 0 C  &tr_colar 0 V     &kp B    &kp C_PLAY_PAUSE    &kp PRINTSCREEN  &kp N          &kp M              &kp COMMA  &kp DOT    &kp SLASH         &kp RSHFT
                    &kp LGUI          &kp LALT        &kp LCTRL         &kp DEL  &lt 1 ENTER         &lt 2 SPACE      &kp BACKSPACE  &kp RCTRL          &kp RALT   &kp RMETA
             >;
 
