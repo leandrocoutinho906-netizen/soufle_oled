@@ -143,6 +143,34 @@
             tapping-term-ms = <400>;
             bindings = <&macro_desfazer>, <&kp>;
         };
+
+        td_copiar: td_copiar {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COPIAR";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&macro_copiar>;
+        };
+
+        td_colar: td_colar {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COLAR";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&macro_colar>;
+        };
+
+        td_recortar: td_recortar {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RECORTAR";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&macro_recortar>;
+        };
+
+        td_desfazer: td_desfazer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DESFAZER";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&macro_desfazer>;
+        };
     };
 
     keymap {
@@ -159,11 +187,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE  &kp N1            &kp N2            &kp N3          &kp N4            &kp N5                                        &kp N6         &kp N7             &kp N8     &kp N9     &kp N0            &kp MINUS
-&kp ESC    &kp Q             &kp W             &kp E           &kp R             &kp T                                         &kp Y          &kp U              &kp I      &kp O      &kp P             &kp LBKT
-&kp TAB    &kp A             &kp S             &kp D           &mt LEFT_SHIFT F  &kp G                                         &kp H          &mt RIGHT_SHIFT J  &kp K      &kp L      &td_interrogacao  &kp SQT
-&kp LSHFT  &tr_desfazer 0 Z  &tr_recortar 0 X  &tr_Copiar 0 C  &tr_colar 0 V     &kp B    &kp C_PLAY_PAUSE    &kp PRINTSCREEN  &kp N          &kp M              &kp COMMA  &kp DOT    &kp SLASH         &kp RSHFT
-                             &kp LGUI          &kp LALT        &kp LCTRL         &kp DEL  &lt 1 ENTER         &lt 2 SPACE      &kp BACKSPACE  &kp RCTRL          &kp RALT   &kp RMETA
+&kp GRAVE  &kp N1        &kp N2        &kp N3      &kp N4            &kp N5                                        &kp N6         &kp N7             &kp N8     &kp N9     &kp N0            &kp MINUS
+&kp ESC    &kp Q         &kp W         &kp E       &kp R             &kp T                                         &kp Y          &kp U              &kp I      &kp O      &kp P             &kp LBKT
+&kp TAB    &kp A         &kp S         &kp D       &mt LEFT_SHIFT F  &kp G                                         &kp H          &mt RIGHT_SHIFT J  &kp K      &kp L      &td_interrogacao  &kp SQT
+&kp LSHFT  &td_desfazer  &td_recortar  &td_copiar  &td_colar         &kp B    &kp C_PLAY_PAUSE    &kp PRINTSCREEN  &kp N          &kp M              &kp COMMA  &kp DOT    &kp SLASH         &kp RSHFT
+                         &kp LGUI      &kp LALT    &kp LCTRL         &kp DEL  &lt 1 ENTER         &lt 2 SPACE      &kp BACKSPACE  &kp RCTRL          &kp RALT   &kp RMETA
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -205,7 +233,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4                    &kp HOME   &trans    &trans    &trans     &trans   &trans
-&trans      &kp INS       &kp PSCRN         &kp K_CMENU       &trans          &trans                          &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
+&trans      &kp INS       &kp PSCRN         &kp K_CMENU       &trans          &trans                          &kp PG_UP  &trans    &kp UP    &trans     &none    &trans
 &trans      &trans        &kp LEFT_ALT      &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
 &trans      &kp K_UNDO    &kp LC(C_AC_CUT)  &kp K_COPY        &kp K_PASTE     &trans        &trans    &trans  &kp END    &trans    &trans    &trans     &trans   &trans
                           &trans            &trans            &trans          &trans        &trans    &trans  &trans     &trans    &trans    &trans
@@ -224,11 +252,11 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none     &none           &none           &none            &none  &none
-&ext_power EP_TOG  &ext_power EP_ON  &none         &none         &none         &none                         &mkp MB1  &none           &mmv MOVE_UP    &mkp MB2         &none  &none
-&ext_power EP_OFF  &none             &none         &none         &none         &none                         &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
-&none              &none             &none         &none         &none         &none         &none    &none  &none     &none           &none           &none            &none  &none
-                                     &none         &none         &none         &none         &none    &none  &none     &none           &none           &none
+&bt BT_CLR         &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none  &none           &none           &none            &none  &none
+&ext_power EP_TOG  &ext_power EP_ON  &none         &none         &none         &none                         &none  &mkp MB1        &mmv MOVE_UP    &mkp MB2         &none  &none
+&ext_power EP_OFF  &none             &none         &none         &none         &none                         &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &none
+&none              &none             &none         &none         &none         &none         &none    &none  &none  &none           &none           &none            &none  &none
+                                     &none         &none         &none         &none         &none    &none  &none  &none           &none           &none
             >;
 
             sensor-bindings =
