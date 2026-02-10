@@ -222,10 +222,10 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans     &kp F1     &kp F2        &kp F3            &kp F4                           &kp F5                                       &kp F6               &kp F7        &kp F8        &kp F9        &kp F10    &kp F11
-&kp GRAVE  &kp N1     &kp N2        &none             &kp RIGHT_BRACKET                &kp BACKSLASH                                &kp LS(KP_MULTIPLY)  &kp NUMBER_1  &kp N2        &kp NUMBER_3  &kp COMMA  &kp F12
-&trans     &kp EXCL   &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_SHIFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                        &kp KP_DIVIDE        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0     &kp DOT
-&trans     &kp EQUAL  &kp DOT       &kp COMMA         &kp MINUS                        &kp PLUS               &kp C_MUTE    &trans  &kp EQUAL            &kp NUMBER_7  &kp N8        &kp N9        &trans     &trans
+&trans     &kp F1     &kp F2        &kp F3            &kp F4                           &kp F5                                       &none                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp F10    &trans
+&kp GRAVE  &none      &none         &none             &kp RIGHT_BRACKET                &kp BACKSLASH                                &kp LS(KP_MULTIPLY)  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COMMA  &kp F12
+&trans     &kp EXCL   &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_SHIFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                        &kp KP_DIVIDE        &kp NUMBER_7  &kp N8        &kp N9        &kp N0     &kp DOT
+&trans     &kp EQUAL  &kp DOT       &kp COMMA         &kp MINUS                        &kp PLUS               &kp C_MUTE    &trans  &kp EQUAL            &kp N0        &trans        &trans        &trans     &trans
                       &trans        &trans            &trans                           &trans                 &trans        &trans  &trans               &trans        &trans        &trans
             >;
 
@@ -245,11 +245,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4                    &kp HOME   &trans    &trans    &trans     &trans   &trans
-&trans      &kp INS       &kp PSCRN         &kp K_CMENU       &trans          &trans                          &kp PG_UP  &trans    &kp UP    &trans     &none    &trans
-&trans      &trans        &kp LEFT_ALT      &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp CLCK                        &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans      &kp K_UNDO    &kp LC(C_AC_CUT)  &kp K_COPY        &kp K_PASTE     &trans        &trans    &trans  &kp END    &trans    &trans    &trans     &trans   &trans
-                          &trans            &trans            &trans          &trans        &trans    &trans  &trans     &trans    &trans    &trans
+&trans  &kp F1   &kp F2        &kp F3            &kp F4          &kp F5                        &kp F6    &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
+&trans  &kp INS  &kp PSCRN     &kp K_CMENU       &trans          &trans                        &none     &trans    &kp UP    &trans     &none    &kp F12
+&trans  &trans   &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp CLCK                      &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
+&trans  &none    &none         &none             &none           &kp K_CALC  &trans    &trans  &kp END   &trans    &trans    &trans     &trans   &trans
+                 &trans        &trans            &trans          &trans      &trans    &trans  &trans    &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
