@@ -269,7 +269,7 @@
 &ext_power EP_TOG  &ext_power EP_ON  &none           &msc SCRL_UP    &none            &none                           &none           &mkp MB1        &mmv MOVE_UP    &mkp MB2         &none         &none
 &ext_power EP_OFF  &none             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none                           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none         &none
 &none              &none             &none           &none           &none            &bt BT_CLR_ALL  &none    &none  &bt BT_CLR_ALL  &none           &none           &none            &none         &none
-                                     &none           &none           &none            &none           &none    &none  &none           &trans          &trans          &trans
+                                     &trans          &none           &none            &none           &none    &none  &none           &trans          &trans          &trans
             >;
 
             sensor-bindings =
