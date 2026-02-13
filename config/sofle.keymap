@@ -222,7 +222,7 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans  &none      &none         &none             &none                            &none                                        &none                &kp COMMA     &kp N0        &kp DOT       &none                 &kp RA(F4)
+&trans  &none      &none         &none             &none                            &none                                        &none                &kp COMMA     &kp N0        &kp DOT       &none                 &none
 &none   &none      &none         &none             &kp RIGHT_BRACKET                &kp BACKSLASH                                &kp LS(KP_MULTIPLY)  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none                 &none
 &trans  &kp EXCL   &kp LEFT_ALT  &kp LEFT_CONTROL  &mt LEFT_SHIFT LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                        &kp KP_DIVIDE        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NON_US_BACKSLASH  &none
 &trans  &kp RA(W)  &kp DOT       &kp COMMA         &kp MINUS                        &kp PLUS               &kp C_MUTE    &trans  &kp EQUAL            &kp N7        &kp N8        &kp N9        &trans                &trans
