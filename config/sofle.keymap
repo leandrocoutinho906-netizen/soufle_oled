@@ -181,7 +181,7 @@
         };
 
         lower_layer {
-            display-name = "lower";
+            display-name = " Esquerda_Low";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
@@ -205,7 +205,7 @@
         };
 
         raise_layer {
-            display-name = "raise";
+            display-name = "Direita_raise";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
