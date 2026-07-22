@@ -143,7 +143,7 @@
             #binding-cells = <2>;
             hold-trigger-on-release;
             tapping-term-ms = <250>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             quick-tap-ms = <175>;
             require-prior-idle-ms = <125>;
         };
